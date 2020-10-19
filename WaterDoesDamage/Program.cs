@@ -27,8 +27,12 @@ namespace ENBLightPatcher
         {
             foreach(var water in state.LoadOrder.PriorityOrder.WinningOverrides<Mutagen.Bethesda.Skyrim.IWaterGetter>())
             {
-                var damageWater = state.PatchMod.Waters.GetOrAddAsOverride(water);
-                damageWater.Flags |= Mutagen.Bethesda.Skyrim.Water.Flag.CausesDamage;
+                if (water.Flags != null && !water.Flags.Value.HasFlag(Water.Flag.CausesDamage))
+                {
+                    var damageWater = state.PatchMod.Waters.GetOrAddAsOverride(water);
+                    damageWater.Flags |= Mutagen.Bethesda.Skyrim.Water.Flag.CausesDamage;
+                }
+                else continue;
             }
         }
     }
