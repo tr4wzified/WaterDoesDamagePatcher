@@ -2,7 +2,7 @@ using Mutagen.Bethesda;
 using Mutagen.Bethesda.Synthesis;
 using Mutagen.Bethesda.Skyrim;
 
-namespace ENBLightPatcher
+namespace WaterDoesDamagePatcher
 {
 
     public class Program
@@ -25,7 +25,7 @@ namespace ENBLightPatcher
 
         public static void RunPatch(SynthesisState<ISkyrimMod, ISkyrimModGetter> state)
         {
-            foreach(var water in state.LoadOrder.PriorityOrder.WinningOverrides<Mutagen.Bethesda.Skyrim.IWaterGetter>())
+            foreach(var water in state.LoadOrder.PriorityOrder.WinningOverrides<IWaterGetter>())
             {
                 if (water.Flags != null && !water.Flags.Value.HasFlag(Water.Flag.CausesDamage))
                 {
