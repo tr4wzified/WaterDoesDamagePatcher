@@ -1,0 +1,7 @@
+{
+  "Nickname": "Water Does Damage Patcher",
+  "Visibility": "Visible",
+  "OneLineDescription": "Patches all the waters in your load order to have the 'Does Damage' flag applied - useful for needs mods.",
+  "LongDescription": "",
+  "PreferredAutoVersioning": "Default"
+}
