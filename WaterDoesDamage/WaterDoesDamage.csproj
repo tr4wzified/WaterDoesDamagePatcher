@@ -1,15 +1,15 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <OutputType>Exe</OutputType>
-        <TargetFramework>net5.0</TargetFramework>
+        <TargetFramework>net9.0</TargetFramework>
         <AssemblyName>WaterDoesDamagePatcher</AssemblyName>
         <RootNamespace>WaterDoesDamage</RootNamespace>
         <ApplicationIcon>Untitled-1.ico</ApplicationIcon>
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Mutagen.Bethesda" Version="0.28.0" />
-        <PackageReference Include="Mutagen.Bethesda.Synthesis" Version="0.17.5" />
+        <PackageReference Include="Mutagen.Bethesda" Version="0.48.0" />
+        <PackageReference Include="Mutagen.Bethesda.Synthesis" Version="0.32" />
     </ItemGroup>
 
 </Project>
